@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #dis{
+        background-image: url("Miru.jpg");
+        background-repeat: no-repeat;
+        background-size:300px;
+        position: absolute;
+        top: 180px;
+        right:2px;
+    }
+    .class{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(105, 4, 13);
+    font-size: 300%;
+    }
+    body{
+        background-image: url("back.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .intro{
+    padding: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    button:hover{
+        background:#bdca0950;
+    }
+    button{
+        font-size: x-large;
+        background:#4c4e0150;
+        color:rgb(68, 23, 2);
+    }
+    #dif{
+        text-align: right;
+        font-size: xx-large;
+    }
+    #topic{
+    font-size:200%;
+    color : rgb(2, 110, 110);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="class my-4">HAPPY BIRTHDAY MIRUU!<br></div><br>
+    <div id="dis"><img src = "Miru.jpg"></div>
+    <div id="topic"><b></b>Look Through Some Of your Pics</div><br><br>
+    <div class="intro">
+        <button onclick="display(0)">My favourite pic😁</button><br><br>
+        <button onclick="display(1)">Ghost pic👻</button><br><br>
+        <button onclick="display(2)">Favourite food😋</button><br><br>
+        <button onclick="display(3)">Favourite junkfood🍭</button><br><br>
+        <button onclick="display(4)">Prank Day🤣</button><br><br>
+        <button onclick="display(5)">High Mode🥴</button><br><br>
+        <button onclick="display(6)">Pro Bowler🎳</button><br><br>
+        <button onclick="display(7)">Press On Ur Risk👀</button><br><br><br><br><br><br>
+    </div>
+    <br><br><br><br>
+    <div id="dif"><button onclick="goback()">Wanna go back</button></div>
+
+    <script>
+        let dic={"0":"Fav.jpg","1":"Ghost.jpg","2" :"Momos.jpg","3" :"Snickers.jpg","4":"Prank.jpg","5":"High.jpg","6":"Probowler.jpg","7":"S.jpg"}
+        document.body.style.backgroundSize ="cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        
+        function display(n) 
+        {
+            let d=dic[n];
+            document.body.style.backgroundImage = "url"+'('+d+')';
+            document.getElementById("topic").style.display = "none";
+            document.getElementById("dis").style.display = "none";
+            let a=document.getElementsByClassName("intro")
+            for (var i=0;i<a.length; i++)
+            {
+                a[i].style.visibility = 'hidden';
+            }
+        }
+            
+        function goback()
+        {
+            history.go();
+        }    
+        
+    </script>
+</body>
+</html>
